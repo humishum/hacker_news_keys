@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "HN Comment Navigator",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://news.ycombinator.com/item?id=*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
